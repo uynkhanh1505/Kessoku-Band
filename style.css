@@ -1,0 +1,7 @@
+
+.icon-lightbulb {
+    color: gray; /* Mặc định là màu xám khi tắt */
+}
+.icon-lightbulb .on {
+    color: yellow; /* Màu vàng khi bật */
+}

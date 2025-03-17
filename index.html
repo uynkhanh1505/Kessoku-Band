@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PLC FX5U Web Server</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src=".\index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/abd3f04063.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Điều khiển PLC FX5U</h1>
+    <button onclick="turnOn()">Bật đèn</button>
+    <button onclick="turnOff()">Tắt đèn</button>
+    <h2>Đèn</h2>
+    <i id="lightbulb" class="fa-solid fa-lightbulb icon-lightbulb" style='font-size:36px'></i>
+    <p>Trạng thái: <span id="status">Tắt</span></p>
+
+    <script>
+        function turnOn() {
+            // Gửi lệnh bật tới PLC
+            document.getElementById("status").innerText = "Bật";
+            document.getElementById("lightbulb").style = 'color:yellow;font-size:36px';
+        }
+        function turnOff() {
+            // Gửi lệnh tắt tới PLC
+            document.getElementById("status").innerText = "Tắt";
+            document.getElementById("lightbulb").style = 'color:gray;font-size:36px';
+        }
+    </script>
+</body>
+</html>
